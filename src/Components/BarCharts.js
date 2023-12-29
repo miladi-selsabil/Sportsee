@@ -8,14 +8,10 @@ import {
   Legend,
   Bar,
 } from "recharts";
-import { data } from "../Data/mock";
+import { formatedData } from "../utils/FormattedData";
 
-const BarCharts = () => {
-  const transformedData = data.map((item) => ({
-    Day: item.Day,
-    calories: item.calories,
-    kilogramme: item.kilogramme
-  }));
+const BarCharts = (props) => {
+  const transformedData = formatedData(props.data);
 
   return (
     <BarChart width={730} height={250} data={transformedData}>
