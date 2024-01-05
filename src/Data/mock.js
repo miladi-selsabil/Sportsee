@@ -91,3 +91,26 @@ export const lineData = [
     time: 10,
   },
 ];
+
+export const pieData = [
+  {
+    name: "Group A",
+    value: "12%",
+  },
+  {
+    name: "Group B",
+    value: 300,
+  },
+ 
+  
+];
+
+export const infoData = [
+  {
+    calories : 1.930,
+    proteines: 150,
+    glucides: 290,
+    lipides: 50
+
+  }
+]
