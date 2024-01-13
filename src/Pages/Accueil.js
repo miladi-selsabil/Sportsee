@@ -5,16 +5,23 @@ import {data, radarData, lineData, pieData, infoData} from "../Data/mock";
 import RadarChart from "../Components/RadarChart";
 import LineCharts from "../Components/LineCharts";
 import PieCharts from "../Components/PieChart";
-import InfosData from "../Components/InforData";
+import InfoCard from "../Components/InforData";
+import Icon from "../Components/icon";
 
 function Accueil() {
+
   return (
-    <div>
+    <div className="container">
+      <Icon/>
       <BarCharts data={data} />
       <RadarChart radarChartData={radarData} />
       <LineCharts lineChartdata={lineData} />
       <PieCharts pieChartData={pieData} />
-      <InfosData info={infoData}/>
+      <div>
+        {infoData.map((info) => (
+          <InfoCard info={info} />
+        ))}
+      </div>
     </div>
   );
 }

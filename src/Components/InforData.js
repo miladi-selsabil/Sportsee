@@ -1,19 +1,16 @@
-import React  from "react";
-import Card from "@mui/material/Card";
+import React from "react";
+import Card from "./Card";
 
-import { formattedInfoData } from "../utils/FormattedInfoData";
+const InfoCard = ({ info }) => {
+  
+  return (
+    <div>
+      <Card texte={`Calories: ${info.calories}kcal`} />
+      <Card texte={`Lipides: ${info.lipides}g`} />
+      <Card texte={`Glucides: ${info.glucides}g`} />
+      <Card texte={`Protéines: ${info.proteines}g`} />
+    </div>
+  );
+};
 
-const InfosData = (props) => {
-    const transformedInfoData = formattedInfoData(props.info);
-return (
-  <Card
-    variant="outlined"
-    width={730}
-    height={250}
-    data={transformedInfoData}
-    dataKey="calories"
-  />
-);
-
-    };
-export default InfosData;
+export default InfoCard;
