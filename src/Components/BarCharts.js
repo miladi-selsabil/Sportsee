@@ -14,14 +14,19 @@ const BarCharts = (props) => {
   const transformedData = formatedData(props.data);
 
   return (
-    <BarChart width={730} height={250} data={transformedData}>
-      <CartesianGrid strokeDasharray="3 3" />
+    <BarChart
+      width={730}
+      height={250}
+      data={transformedData}
+      style={{ backgroundColor: "#FBFBFB", margin: "10px" }}
+    >
+      <CartesianGrid strokeDasharray="3 3" width={7} />
       <XAxis dataKey="Day" />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="calories" fill="#8884d8" />
-      <Bar dataKey="kilogramme" fill="#FFFF00" />
+      <Bar radius={[20, 20, 0, 0]} dataKey="calories" fill="#E60000" />
+      <Bar radius={[20, 20, 0, 0]} dataKey="kilogramme" fill="#282D30" />
     </BarChart>
   );
 };

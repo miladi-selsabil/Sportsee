@@ -7,19 +7,28 @@ import LineCharts from "../Components/LineCharts";
 import PieCharts from "../Components/PieChart";
 import InfoCard from "../Components/InforData";
 import Icon from "../Components/icon";
+import Name from "../Components/Name";
 
 function Accueil() {
 
   return (
     <div className="container">
-      <Icon/>
-      <BarCharts data={data} />
-      <RadarChart radarChartData={radarData} />
-      <LineCharts lineChartdata={lineData} />
-      <PieCharts pieChartData={pieData} />
+      <Icon />
+
+      <div className="charts">
+        <Name data={data} />
+
+        <BarCharts data={data} />
+        <div className="threechart">
+          <LineCharts lineChartdata={lineData} />
+          <RadarChart radarChartData={radarData} />
+
+          <PieCharts pieChartData={pieData} />
+        </div>
+      </div>
       <div>
-        {infoData.map((info) => (
-          <InfoCard info={info} />
+        {infoData.map((info, index) => (
+          <InfoCard key={index} data={info} />
         ))}
       </div>
     </div>

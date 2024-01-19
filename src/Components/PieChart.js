@@ -8,16 +8,19 @@ import { formattedPieData } from "../utils/FormattedPieData";
 const PieCharts = (props) => {
     const transformedPieData = formattedPieData(props.pieChartData);
 return (
-  <PieChart width={730} height={250}>
+  <PieChart
+    width={258}
+    height={263}
+    style={{ backgroundColor: "#FBFBFB", margin: "10px" }}
+  >
     <Pie
       data={transformedPieData}
       dataKey="value"
       nameKey="name"
-      cx="50%"
       cy="50%"
       innerRadius={60}
       outerRadius={80}
-      fill="#82ca9d"
+      fill="red"
       label
     />
   </PieChart>

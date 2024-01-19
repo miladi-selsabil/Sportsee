@@ -6,7 +6,7 @@ export const data = [
       name: "Alex",
       age: 30,
     },
-    Day: "12/02/2022",
+    Day: "1",
     calories: 240,
     kilogramme: 80,
   },
@@ -15,9 +15,81 @@ export const data = [
       name: "Alex",
       age: 30,
     },
-    Day: "13/02/2022",
+    Day: "2",
     calories: 300,
     kilogramme: 74,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "3",
+    calories: 240,
+    kilogramme: 80,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "4",
+    calories: 240,
+    kilogramme: 80,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "5",
+    calories: 240,
+    kilogramme: 80,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "6",
+    calories: 240,
+    kilogramme: 80,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "7",
+    calories: 240,
+    kilogramme: 80,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "8",
+    calories: 240,
+    kilogramme: 80,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "9",
+    calories: 240,
+    kilogramme: 80,
+  },
+  {
+    personne: {
+      name: "Alex",
+      age: 30,
+    },
+    Day: "10",
+    calories: 240,
+    kilogramme: 80,
   },
 ];
 
@@ -63,31 +135,31 @@ export const radarData = [
 
 export const lineData = [
   {
-    name: "Lundi",
+    name: "L",
     time: 30,
   },
   {
-    name: "Mardi",
+    name: "M",
     time: 50,
   },
   {
-    name: "Mercredi",
+    name: "M",
     time: 10,
   },
   {
-    name: "Jeudi",
+    name: "J",
     time: 60,
   },
   {
-    name: "Vendredi",
+    name: "V",
     time: 30,
   },
   {
-    name: "Samedi",
+    name: "S",
     time: 40,
   },
   {
-    name: "Dimanche",
+    name: "D",
     time: 10,
   },
 ];

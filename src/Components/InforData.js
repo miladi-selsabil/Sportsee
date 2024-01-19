@@ -1,14 +1,17 @@
 import React from "react";
 import Card from "./Card";
-
-const InfoCard = ({ info }) => {
-  
+import { getInfoUser } from "../utils/formattedInfoData";
+const InfoCard = ({ data }) => {
+  const dataFormated = getInfoUser(data);
   return (
     <div>
-      <Card texte={`Calories: ${info.calories}kcal`} />
-      <Card texte={`Lipides: ${info.lipides}g`} />
-      <Card texte={`Glucides: ${info.glucides}g`} />
-      <Card texte={`Protéines: ${info.proteines}g`} />
+      {dataFormated.map((info, index) => (
+        <Card
+          key={index}
+          texte={`${info.title}: ${info.value} ${info.unite}`}
+          imageSrc={info.icone}
+        />
+      ))}
     </div>
   );
 };

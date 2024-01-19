@@ -2,7 +2,6 @@ import React from "react";
 import {
   LineChart,
   XAxis,
-  CartesianGrid,
   YAxis,
   Legend,
   Tooltip,
@@ -15,17 +14,17 @@ const LineCharts = (props) => {
 
   return (
     <LineChart
-      width={730}
-      height={250}
+      width={408}
+      height={263}
       data={transformedLineData}
-      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+      margin={{ top: 5, bottom: 5, right: 45 }}
+      style={{ backgroundColor: "red", borderRadius: 5, margin:"10px" }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
+      <XAxis dataKey="name" stroke="#fff" />
+      <YAxis style={{ display: "none" }} />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="time" stroke="#8884d8" />
+      <Line type="monotone" dataKey="time" stroke="#fff" />
     </LineChart>
   );
 };
