@@ -16,8 +16,9 @@ function Accueil() {
       <Icon />
 
       <div className="charts">
-        <Name data={data} />
-
+        {infoData.map((info, index) => (
+          <Name key={index} data={info} />
+        ))}
         <BarCharts data={data} />
         <div className="threechart">
           <LineCharts lineChartdata={lineData} />
@@ -26,7 +27,7 @@ function Accueil() {
           <PieCharts pieChartData={pieData} />
         </div>
       </div>
-      <div>
+      <div className="card">
         {infoData.map((info, index) => (
           <InfoCard key={index} data={info} />
         ))}

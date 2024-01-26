@@ -26,7 +26,7 @@ export const data = [
     },
     Day: "3",
     calories: 240,
-    kilogramme: 80,
+    kilogramme: 20,
   },
   {
     personne: {
@@ -35,7 +35,7 @@ export const data = [
     },
     Day: "4",
     calories: 240,
-    kilogramme: 80,
+    kilogramme: 50,
   },
   {
     personne: {
@@ -44,7 +44,7 @@ export const data = [
     },
     Day: "5",
     calories: 240,
-    kilogramme: 80,
+    kilogramme: 70,
   },
   {
     personne: {
@@ -53,7 +53,7 @@ export const data = [
     },
     Day: "6",
     calories: 240,
-    kilogramme: 80,
+    kilogramme: 30,
   },
   {
     personne: {
@@ -179,10 +179,18 @@ export const pieData = [
 
 export const infoData = [
   {
-    calories : 1.930,
-    proteines: 150,
-    glucides: 290,
-    lipides: 50
-
-  }
+        id: 12,
+        userInfos: {
+            firstName: 'Karl',
+            lastName: 'Dovineau',
+            age: 31,
+        },
+        todayScore: 0.12,
+        keyData: {
+            calorieCount: 1930,
+            proteinCount: 155,
+            carbohydrateCount: 290,
+            lipidCount: 50
+        }
+      }
 ]

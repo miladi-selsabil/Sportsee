@@ -31,12 +31,19 @@ code {
       display: flex;
         background-color: #FBFBFB;
         width: 280px;
-        margin-bottom: 23px;
+        margin-bottom: 39px;
         align-items: center;
+        padding: 30px;
+}
+.container .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper img{
   width: 60px;
   height: 60px;
+  margin-right: 20px;
 }
 .icon{
   background-color: black;
@@ -51,4 +58,27 @@ code {
 }
 .charts .threechart {
   display: flex;
+}
+.name{
+  margin-top: 100px;
+}
+.name .title {
+font-size: 48px;
+font-weight: 500;
+}
+.name .text{
+  margin-top: 15px;
+  margin-bottom: 77px;
+}
+.name .red-text{
+  color: red;
+}
+.wrapper .txt{
+  font-size: 14px;
+}
+.wrapper .wrapper-value h2, .txt{
+  margin: 0;
+}
+.infouser{
+  margin-top: 214px;
 }

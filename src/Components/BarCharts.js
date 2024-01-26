@@ -22,11 +22,22 @@ const BarCharts = (props) => {
     >
       <CartesianGrid strokeDasharray="3 3" width={7} />
       <XAxis dataKey="Day" />
-      <YAxis />
+      <YAxis yAxisId={"cal"} hide />
+      <YAxis yAxisId={"kil"} orientation="right" />
       <Tooltip />
       <Legend />
-      <Bar radius={[20, 20, 0, 0]} dataKey="calories" fill="#E60000" />
-      <Bar radius={[20, 20, 0, 0]} dataKey="kilogramme" fill="#282D30" />
+      <Bar
+        radius={[20, 20, 0, 0]}
+        dataKey="calories"
+        fill="#E60000"
+        yAxisId={"cal"}
+      />
+      <Bar
+        radius={[20, 20, 0, 0]}
+        dataKey="kilogramme"
+        fill="#282D30"
+        yAxisId={"kil"}
+      />
     </BarChart>
   );
 };
