@@ -134,6 +134,7 @@ export const radarData = [
 ];
 
 export const lineData = [
+ 
   {
     name: "L",
     time: 30,
@@ -162,16 +163,14 @@ export const lineData = [
     name: "D",
     time: 10,
   },
+  
 ];
 
 export const pieData = [
-  {
-    name: "Group A",
-    value: "12%",
-  },
+
   {
     name: "Group B",
-    value: 300,
+    value: 20,
   },
  
   

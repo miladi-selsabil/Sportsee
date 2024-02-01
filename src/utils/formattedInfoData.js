@@ -2,7 +2,7 @@ import Lipides from "../assets/calories-icon.png";
 import Calories from "../assets/carbs-icon.png";
 import Glucides from "../assets/fat-icon.png";
 import Proteines from "../assets/protein-icon.png";
-export const use = (data) => [
+export const useInfoUser = (data) => [
    {
     valeur: `${data.userInfos.firstName} ${data.userInfos.lastName}`,
   }

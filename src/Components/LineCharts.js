@@ -17,14 +17,18 @@ const LineCharts = (props) => {
       width={400}
       height={263}
       data={transformedLineData}
-      margin={{ top: 5, bottom: 5, }}
-      style={{ backgroundColor: "red", borderRadius: 5, margin:"10px" }}
+      margin={{ top: 5, bottom: 5 }}
+      style={{ backgroundColor: "red", borderRadius: 5,  }}
     >
-      <XAxis dataKey="name" stroke="#fff" />
-      <YAxis hide/>
-      <Tooltip />
+      <XAxis
+        dataKey="name"
+        stroke="#fff"
+        tick={{ fill: "#FFFFFF", opacity: "0.5" }}
+      />
+      <YAxis hide />
+      <Tooltip   />
       <Legend />
-      <Line type="monotone" dataKey="time" stroke="#fff" />
+      <Line type="monotone" dataKey="time" stroke="#fff" opacity="0.5" />
     </LineChart>
   );
 };

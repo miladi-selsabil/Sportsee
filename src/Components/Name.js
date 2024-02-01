@@ -1,7 +1,7 @@
-import { use } from "../utils/formattedInfoData";
+import { useInfoUser } from "../utils/formattedInfoData";
 
 const Name = ({ data }) => {
-  const dataFormated = use(data);
+  const dataFormated = useInfoUser(data);
   return (
     <div className="name">
       {dataFormated.map((info, index) => (
