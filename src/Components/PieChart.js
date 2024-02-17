@@ -25,7 +25,6 @@ return (
       innerRadius={65}
       outerRadius={80}
       fill="#FF0000"
-      label
       paddingAngle={5}
 
     >

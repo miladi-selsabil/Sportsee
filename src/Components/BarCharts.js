@@ -6,6 +6,7 @@ import {
   YAxis,
   Tooltip,
   Legend,
+  ResponsiveContainer,
   Bar,
 } from "recharts";
 import { formatedData } from "../utils/FormattedData";
@@ -14,9 +15,10 @@ const BarCharts = (props) => {
   const transformedData = formatedData(props.data);
 
   return (
+    <ResponsiveContainer width={970} height={350}>
       <BarChart
-        width={730}
-        height={250}
+        width={"100%"}
+        height={"100%"}
         data={transformedData}
         style={{ backgroundColor: "#FBFBFB" }}
         barCategoryGap={10}
@@ -28,7 +30,7 @@ const BarCharts = (props) => {
         <YAxis yAxisId={"kil"} orientation="right" />
 
         <Tooltip />
-        <Legend />
+        <Legend verticalAlign="top" height={36} align="right" iconType="circle" />
         <Bar
           radius={[20, 20, 0, 0]}
           dataKey="calories"
@@ -44,6 +46,7 @@ const BarCharts = (props) => {
           maxBarSize={10}
         />
       </BarChart>
+    </ResponsiveContainer>
   );
 };
 
