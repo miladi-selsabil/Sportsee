@@ -1,195 +1,359 @@
+export const data =
+  //  [
+  //   {
+  //     personne: {
+  //       name: "Alex",
+  //       age: 30,
+  //     },
+  //     Day: "1",
+  //     calories: 240,
+  //     kilogramme: 80,
+  //   },];
+  [
+    {
+      userId: 12,
+      sessions: [
+        {
+          day: "2020-07-01",
+          kilogram: 80,
+          calories: 240,
+        },
+        {
+          day: "2020-07-02",
+          kilogram: 80,
+          calories: 220,
+        },
+        {
+          day: "2020-07-03",
+          kilogram: 81,
+          calories: 280,
+        },
+        {
+          day: "2020-07-04",
+          kilogram: 81,
+          calories: 290,
+        },
+        {
+          day: "2020-07-05",
+          kilogram: 80,
+          calories: 160,
+        },
+        {
+          day: "2020-07-06",
+          kilogram: 78,
+          calories: 162,
+        },
+        {
+          day: "2020-07-07",
+          kilogram: 76,
+          calories: 390,
+        },
+      ],
+    },
+    {
+      userId: 18,
+      sessions: [
+        {
+          day: "2020-07-01",
+          kilogram: 70,
+          calories: 240,
+        },
+        {
+          day: "2020-07-02",
+          kilogram: 69,
+          calories: 220,
+        },
+        {
+          day: "2020-07-03",
+          kilogram: 70,
+          calories: 280,
+        },
+        {
+          day: "2020-07-04",
+          kilogram: 70,
+          calories: 500,
+        },
+        {
+          day: "2020-07-05",
+          kilogram: 69,
+          calories: 160,
+        },
+        {
+          day: "2020-07-06",
+          kilogram: 69,
+          calories: 162,
+        },
+        {
+          day: "2020-07-07",
+          kilogram: 69,
+          calories: 390,
+        },
+      ],
+    },
+  ];
+ 
 
+export const radarData =
+  // [
+  //   {
+  //     subject: "Intensité",
+  //     A: 120,
+  //     B: 110,
+  //     fullMark: 150,
+  //   },
 
-export const data = [
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
+  // ];
+  [
+    {
+      userId: 12,
+      kind: {
+        1: "cardio",
+        2: "energy",
+        3: "endurance",
+        4: "strength",
+        5: "speed",
+        6: "intensity",
+      },
+      data: [
+        {
+          value: 80,
+          kind: 1,
+        },
+        {
+          value: 120,
+          kind: 2,
+        },
+        {
+          value: 140,
+          kind: 3,
+        },
+        {
+          value: 50,
+          kind: 4,
+        },
+        {
+          value: 200,
+          kind: 5,
+        },
+        {
+          value: 90,
+          kind: 6,
+        },
+      ],
     },
-    Day: "1",
-    calories: 240,
-    kilogramme: 80,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
+    {
+      userId: 18,
+      kind: {
+        1: "cardio",
+        2: "energy",
+        3: "endurance",
+        4: "strength",
+        5: "speed",
+        6: "intensity",
+      },
+      data: [
+        {
+          value: 200,
+          kind: 1,
+        },
+        {
+          value: 240,
+          kind: 2,
+        },
+        {
+          value: 80,
+          kind: 3,
+        },
+        {
+          value: 80,
+          kind: 4,
+        },
+        {
+          value: 220,
+          kind: 5,
+        },
+        {
+          value: 110,
+          kind: 6,
+        },
+      ],
     },
-    Day: "2",
-    calories: 300,
-    kilogramme: 74,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "3",
-    calories: 240,
-    kilogramme: 20,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "4",
-    calories: 240,
-    kilogramme: 50,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "5",
-    calories: 240,
-    kilogramme: 70,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "6",
-    calories: 240,
-    kilogramme: 30,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "7",
-    calories: 240,
-    kilogramme: 80,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "8",
-    calories: 240,
-    kilogramme: 80,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "9",
-    calories: 240,
-    kilogramme: 80,
-  },
-  {
-    personne: {
-      name: "Alex",
-      age: 30,
-    },
-    Day: "10",
-    calories: 240,
-    kilogramme: 80,
-  },
-];
-
-
-export const radarData = [
-  {
-    subject: "Intensité",
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: "Vitesse",
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "Force",
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "Endurance",
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: "Energie",
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: "Cardio",
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
+  ];
 
 export const lineData = [
- 
   {
-    name: "L",
-    time: 30,
+    userId: 12,
+    sessions: [
+      {
+        day: 1,
+        sessionLength: 30,
+      },
+      {
+        day: 2,
+        sessionLength: 23,
+      },
+      {
+        day: 3,
+        sessionLength: 45,
+      },
+      {
+        day: 4,
+        sessionLength: 50,
+      },
+      {
+        day: 5,
+        sessionLength: 0,
+      },
+      {
+        day: 6,
+        sessionLength: 0,
+      },
+      {
+        day: 7,
+        sessionLength: 60,
+      },
+    ],
   },
   {
-    name: "M",
-    time: 50,
+    userId: 18,
+    sessions: [
+      {
+        day: 1,
+        sessionLength: 30,
+      },
+      {
+        day: 2,
+        sessionLength: 40,
+      },
+      {
+        day: 3,
+        sessionLength: 50,
+      },
+      {
+        day: 4,
+        sessionLength: 30,
+      },
+      {
+        day: 5,
+        sessionLength: 30,
+      },
+      {
+        day: 6,
+        sessionLength: 50,
+      },
+      {
+        day: 7,
+        sessionLength: 50,
+      },
+    ],
   },
-  {
-    name: "M",
-    time: 10,
-  },
-  {
-    name: "J",
-    time: 60,
-  },
-  {
-    name: "V",
-    time: 30,
-  },
-  {
-    name: "S",
-    time: 40,
-  },
-  {
-    name: "D",
-    time: 10,
-  },
-  
 ];
+// [
+//   {
+//     name: "L",
+//     time: 30,
+//   },
+//   {
+//     name: "M",
+//     time: 50,
+//   },
+//   {
+//     name: "M",
+//     time: 10,
+//   },
+//   {
+//     name: "J",
+//     time: 60,
+//   },
+//   {
+//     name: "V",
+//     time: 30,
+//   },
+//   {
+//     name: "S",
+//     time: 40,
+//   },
+//   {
+//     name: "D",
+//     time: 10,
+//   },
+// ];
 
 export const pieData = [
-
   {
     name: "Group B",
     value: 20,
   },
- 
-  
 ];
 
-export const infoData = [
+export const infoData =
+[
   {
-        id: 12,
-        userInfos: {
-            firstName: 'Karl',
-            lastName: 'Dovineau',
-            age: 31,
-        },
-        todayScore: 0.12,
-        keyData: {
-            calorieCount: 1930,
-            proteinCount: 155,
-            carbohydrateCount: 290,
-            lipidCount: 50
-        }
-      }
-]
+    id: 12,
+    userInfos: {
+      firstName: "Karl",
+      lastName: "Dovineau",
+      age: 31,
+    },
+    todayScore: 0.12,
+    keyData: {
+      calorieCount: 1930,
+      proteinCount: 155,
+      carbohydrateCount: 290,
+      lipidCount: 50,
+    },
+  },
+  {
+    id: 18,
+    userInfos: {
+      firstName: "Cecilia",
+      lastName: "Ratorez",
+      age: 34,
+    },
+    score: 0.3,
+    keyData: {
+      calorieCount: 2500,
+      proteinCount: 90,
+      carbohydrateCount: 150,
+      lipidCount: 120,
+    },
+  },
+];
+ //[
+//   {
+//     id: 12,
+//     userInfos: {
+//       firstName: "Karl",
+//       lastName: "Dovineau",
+//       age: 31,
+//     },
+//     todayScore: 0.12,
+//     keyData: {
+//       calorieCount: 1930,
+//       proteinCount: 155,
+//       carbohydrateCount: 290,
+//       lipidCount: 50,
+//     },
+//   },
+// ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

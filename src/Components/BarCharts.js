@@ -25,12 +25,17 @@ const BarCharts = (props) => {
         margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
       >
         <CartesianGrid strokeDasharray="3 3" width={7} />
-        <XAxis dataKey="Day" />
+        <XAxis dataKey="day" />
         <YAxis yAxisId={"cal"} hide />
         <YAxis yAxisId={"kil"} orientation="right" />
 
         <Tooltip />
-        <Legend verticalAlign="top" height={36} align="right" iconType="circle" />
+        <Legend
+          verticalAlign="top"
+          height={36}
+          align="right"
+          iconType="circle"
+        />
         <Bar
           radius={[20, 20, 0, 0]}
           dataKey="calories"
@@ -40,7 +45,7 @@ const BarCharts = (props) => {
         />
         <Bar
           radius={[20, 20, 0, 0]}
-          dataKey="kilogramme"
+          dataKey="kilogram"
           fill="#282D30"
           yAxisId={"kil"}
           maxBarSize={10}

@@ -1,7 +1,7 @@
 export const formatedData = (data) => {
   return data.map((item) => ({
-    Day: item.Day,
+    day: item.day,
     calories: item.calories,
-    kilogramme: item.kilogramme,
+    kilogram: item.kilogram,
   }));
 };
