@@ -10,10 +10,20 @@ import {
   Bar,
 } from "recharts";
 import { formatedData } from "../utils/FormattedData";
-
+function CustomToolTip({active, payload}) {
+  if(active && payload && payload.length){
+    return (
+      <div className="tooltip">
+        <p>{payload[0].value + 'kg'}</p>
+        <p>{payload[1].value + 'kcal'}</p>
+      </div>
+    )
+  }
+  return null
+}
 const BarCharts = (props) => {
   const transformedData = formatedData(props.data);
-
+console.log("ffff",props.data)
   return (
     <ResponsiveContainer width={970} height={350}>
       <BarChart
@@ -25,11 +35,23 @@ const BarCharts = (props) => {
         margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
       >
         <CartesianGrid strokeDasharray="3 3" width={7} />
-        <XAxis dataKey="day" />
+        <XAxis dataKey="day" tickFormatter={(day) => new Date(day).getDate()} />
         <YAxis yAxisId={"cal"} hide />
-        <YAxis yAxisId={"kil"} orientation="right" />
+        <YAxis
+          yAxisId={"kil"}
+          orientation="right"
+          tickMargin={30}
+          tick={{ fill: "#9B9EAC" }}
+          tickLine={false}
+          axisLine={false}
+          domain={["dataMin-2", "dataMax+1"]}
+          tickCount={3}
+        />
 
-        <Tooltip />
+        <Tooltip
+          content={<CustomToolTip />}
+          cursor={{ fill: "rgba(196, 196, 196, 0.5)" }}
+        />
         <Legend
           verticalAlign="top"
           height={36}

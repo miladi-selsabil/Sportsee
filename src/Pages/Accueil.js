@@ -75,10 +75,37 @@ function Accueil() {
   useEffect(() => {
     if(mock){
       setUserInfo(data)
+      console.log("data", data)
     }else{
       getId();
     }
     
+  }, [id, mock]);
+ useEffect(() => {
+   if (mock) {
+    const activities = data.find(activitie => activitie.userId === Number.parseInt(id))
+    setActivity(activities.sessions)
+   } else {
+    
+     getActivity()
+   }
+ }, [id, mock]);
+ useEffect(() => {
+   if (mock) {
+    const averages = data.find(average => average.userId === Number.parseInt(id))
+     setAverageSession(averages);
+   } else {
+     getAverage();
+   }
+ }, [id, mock]);
+
+  useEffect(() => {
+    if(mock){
+    const performances = data.find(perfor => perfor.userId === Number.parseInt(id))
+      setPerformance(performances);
+    }else{
+      getPerformance();
+    }
   }, [id, mock]);
 
   useEffect(() => {
@@ -95,18 +122,18 @@ function Accueil() {
 
       <div className="charts">
         <Name data={userInfo} />
-        <BarCharts data={data} />
+        <BarCharts data={activity} />
         <div className="threechart">
-          <LineCharts lineChartdata={lineData} />
-          <RadarChart radarChartData={radarData} />
+          <LineCharts lineChartdata={averageSession} />
+          <RadarChart radarChartData={performance} />
 
           <PieCharts pieChartData={pieData} />
         </div>
       </div>
       <div className="card">
-        {infoData.map((info, index) => (
-          <InfoCard key={index} data={info} />
-        ))}
+
+          <InfoCard  data={userInfo} />
+     
       </div>
     </div>
   );

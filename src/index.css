@@ -83,3 +83,12 @@ font-weight: 500;
 .infouser{
   margin-top: 214px;
 }
+.tooltip{
+background: red;
+color: white;
+padding: 10px;
+}
+.tooltipLine{
+  background-color: white;
+  padding: 10px;
+}

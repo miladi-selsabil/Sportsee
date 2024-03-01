@@ -2,11 +2,7 @@ import Lipides from "../assets/calories-icon.png";
 import Calories from "../assets/carbs-icon.png";
 import Glucides from "../assets/fat-icon.png";
 import Proteines from "../assets/protein-icon.png";
-export const useInfoUser = (data) => {
-  return {
-    valeur: `${data?.userInfos?.firstName} ${data?.userInfos?.lastName}`,
-  };
-};
+
 export const getInfoUser = (data) => [
   {
     value: getValueByKey(data.keyData, "lipidCount"),
@@ -36,5 +32,6 @@ export const getInfoUser = (data) => [
 
 
 const getValueByKey = (data, key) => {
-  return data[key];
+  return data && data[key] !== undefined ? data[key] : null;
 };
+

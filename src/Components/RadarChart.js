@@ -10,15 +10,15 @@ import {
 } from "recharts";
 import { formatedRadarData } from "../utils/FormattedRadarData";
 
+
+
 const RadarCharts = (props) => {
   const transformedRadarData = formatedRadarData(props.radarChartData);
 
   return (
-    <ResponsiveContainer width={300} height={263}>
+    <ResponsiveContainer width={350} height={263}>
       <RadarChart
         outerRadius={90}
-        // width={300}
-        // height={263}
         data={transformedRadarData}
         style={{ backgroundColor: "#000", borderRadius: 5, margin: "10px" }}
       >
@@ -38,7 +38,12 @@ const RadarCharts = (props) => {
           tick={false}
           axisLine={false}
         />
-        <Radar dataKey="A" stroke="#FF0000" fill="#FF0000" fillOpacity={0.6} />
+        <Radar
+          dataKey="value"
+          stroke="#FF0000"
+          fill="#FF0000"
+          fillOpacity={0.6}
+        />
       </RadarChart>
     </ResponsiveContainer>
   );
