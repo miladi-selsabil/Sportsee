@@ -3,15 +3,15 @@ import BarCharts from "../Components/BarCharts";
 import { data, radarData, lineData, pieData, infoData } from "../Data/mock";
 import RadarChart from "../Components/RadarChart";
 import LineCharts from "../Components/LineCharts";
-import PieCharts from "../Components/PieChart";
-import InfoCard from "../Components/InforData";
+import InfoCard from "../Components/InfoCard";
 import Icon from "../Components/icon";
 import Name from "../Components/Name";
 import { env } from "../config/env";
 import { useParams } from "react-router-dom";
+import PieChartData from "../Components/PieChart";
 
 function Accueil() {
-    const [mock, setmock] = useState(false);
+    const [mock, setmock] = useState(true);
 
   const [activity, setActivity] = useState([]);
   const [averageSession, setAverageSession] = useState([]);
@@ -24,7 +24,6 @@ function Accueil() {
       const response = await fetch(`${env.backendUrl}/${id}`);
       const data = await response.json();
       setUserInfo(data.data);
-      console.log('-------',data.data)
     } catch (error) {
       console.error(
         "Erreur lors de la récupération des données de l'utilisateur :",
@@ -74,8 +73,8 @@ function Accueil() {
 
   useEffect(() => {
     if(mock){
-      setUserInfo(data)
-      console.log("data", data)
+      const info = infoData.find(infoUser => infoUser.id === Number.parseInt(id))
+      setUserInfo(info)
     }else{
       getId();
     }
@@ -92,7 +91,7 @@ function Accueil() {
  }, [id, mock]);
  useEffect(() => {
    if (mock) {
-    const averages = data.find(average => average.userId === Number.parseInt(id))
+    const averages = lineData.find(average => average.userId === Number.parseInt(id))
      setAverageSession(averages);
    } else {
      getAverage();
@@ -101,7 +100,7 @@ function Accueil() {
 
   useEffect(() => {
     if(mock){
-    const performances = data.find(perfor => perfor.userId === Number.parseInt(id))
+    const performances = radarData.find(perfor => perfor.userId === Number.parseInt(id))
       setPerformance(performances);
     }else{
       getPerformance();
@@ -127,7 +126,7 @@ function Accueil() {
           <LineCharts lineChartdata={averageSession} />
           <RadarChart radarChartData={performance} />
 
-          <PieCharts pieChartData={pieData} />
+          <PieChartData pieChartData={userInfo} />
         </div>
       </div>
       <div className="card">

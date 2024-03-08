@@ -24,13 +24,18 @@ code {
 }
 
 .container{
-  display: flex;
-  justify-content: space-between;
+  
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+    
+}
+.charts{
+  width: 70%;
 }
 .wrapper{
       display: flex;
         background-color: #FBFBFB;
-        width: 280px;
         margin-bottom: 39px;
         align-items: center;
         padding: 30px;
@@ -58,9 +63,10 @@ code {
 }
 .charts .threechart {
   display: flex;
+  justify-content: space-around;
 }
 .name{
-  margin-top: 100px;
+  margin-top: 20px;
 }
 .name .title {
 font-size: 48px;
@@ -68,7 +74,7 @@ font-weight: 500;
 }
 .name .text{
   margin-top: 15px;
-  margin-bottom: 77px;
+  margin-bottom: 20px;
 }
 .name .red-text{
   color: red;
@@ -80,9 +86,7 @@ font-weight: 500;
 .wrapper .wrapper-value h2, .txt{
   margin: 0;
 }
-.infouser{
-  margin-top: 214px;
-}
+
 .tooltip{
 background: red;
 color: white;
@@ -91,4 +95,33 @@ padding: 10px;
 .tooltipLine{
   background-color: white;
   padding: 10px;
+}
+.pieChartCard, .activity, .lineChart{
+position: relative;
+}
+.pieChartCard .scorePie{
+position: absolute;
+top: 1.5rem;
+left: 1.875rem;
+color: #20253a;
+font-size: 15px;
+z-index: 1;
+font-weight: 500;}
+
+.activity .activityTitle {
+  position: absolute;
+    color: #20253a;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.lineChart .lineTitle{
+  position: absolute;
+    left: 2.125rem;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    z-index: 1;
+    opacity: 0.6;
 }

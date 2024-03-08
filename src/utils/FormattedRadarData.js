@@ -1,21 +1,7 @@
 export const formatedRadarData = (radarData) => {
-  if (
-    !radarData ||
-    !radarData.data ||
-    !Array.isArray(radarData.data.data) ||
-    !radarData.data.kind ||
-    !radarData.data.userId
-  ) {
-    console.error(
-      "error",
-      radarData
-    );
-    return [];
-  }
-
-  const userId = radarData.data.userId;
-  const kindLabels = radarData.data.kind;
-  const radarChartData = radarData.data.data;
+  const userId = radarData?.data?.userId || [];
+  const kindLabels = radarData?.data?.kind || [];
+  const radarChartData = radarData?.data?.data || [];
 
   const formattedData = radarChartData.map((item) => ({
     subject: kindLabels[item.kind],
@@ -25,3 +11,25 @@ export const formatedRadarData = (radarData) => {
 
   return formattedData;
 };
+
+export const formatKind = (value) => {
+  if(value === "cardio"){
+    return 'Cardio'
+  }
+  if (value === "energy"){
+    return 'Energie'
+  }
+  if(value === 'endurance'){
+    return 'Endurance'
+  }
+  if (value === "strength") {
+    return "Force";
+  }
+   if (value === "speed") {
+     return "Vitesse";
+   }
+    if (value === "intensity") {
+      return "Intensité";
+    }
+    return
+}

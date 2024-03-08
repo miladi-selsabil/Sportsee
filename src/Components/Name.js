@@ -2,7 +2,6 @@ import { useInfoUser } from "../utils/FormattedUserInfoData";
 
 const Name = ({ data }) => {
   const dataFormated = useInfoUser(data);
-  console.log(dataFormated)
   return (
     <div className="name">
         <div  className="title">
