@@ -9,8 +9,8 @@ const PieCharts = (props) => {
     <>
       <div className="pieChartCard">
         <h3 className="scorePie">Score</h3>
-      </div>
-      <ResponsiveContainer width="100%" height={400}>
+      
+      <ResponsiveContainer >
         <PieChart style={{ backgroundColor: "#FBFBFB" }}>
           <Pie
             data={transformedPieData.dataArray}
@@ -34,6 +34,7 @@ const PieCharts = (props) => {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
+      </div>
     </>
   );
 };

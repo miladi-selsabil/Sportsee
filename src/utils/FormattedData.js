@@ -1,13 +1,5 @@
 export const formatedData = (datas) => {
-  // if ( !datas || !datas.data || !Array.isArray(datas.data.sessions)
-  // ) {
-  //   console.error(
-  //     "error",
-  //     datas
-  //   );
-  //   return [];
-  // }
-
+  
   const data = datas?.data?.sessions || [];
 
   return data.map((item) => ({

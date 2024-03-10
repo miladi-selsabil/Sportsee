@@ -248,43 +248,8 @@ export const lineData = [
     ],
   },
 ];
-// [
-//   {
-//     name: "L",
-//     time: 30,
-//   },
-//   {
-//     name: "M",
-//     time: 50,
-//   },
-//   {
-//     name: "M",
-//     time: 10,
-//   },
-//   {
-//     name: "J",
-//     time: 60,
-//   },
-//   {
-//     name: "V",
-//     time: 30,
-//   },
-//   {
-//     name: "S",
-//     time: 40,
-//   },
-//   {
-//     name: "D",
-//     time: 10,
-//   },
-// ];
 
-export const pieData = [
-  {
-    name: "Group B",
-    value: 20,
-  },
-];
+
 
 export const infoData =
 [

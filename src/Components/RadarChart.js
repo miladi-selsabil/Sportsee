@@ -4,7 +4,6 @@ import {
   Radar,
   PolarAngleAxis,
   PolarRadiusAxis,
-  Legend,
   Text,
   PolarGrid,
   ResponsiveContainer,
@@ -14,6 +13,7 @@ import { formatKind } from "../utils/FormattedRadarData";
 
 const RadarCharts = (props) => {
   const transformedRadarData = formatedRadarData(props.radarChartData);
+
   function renderPolarAngleAxis({ payload, x, y, cx, cy, ...rest }) {
     return (
       <Text
@@ -21,25 +21,30 @@ const RadarCharts = (props) => {
         verticalAnchor="middle"
         y={y + (y - cy) / 10}
         x={x + (x - cx) / 10}
+        fill="#fff" 
       >
         {formatKind(payload.value, transformedRadarData)}
       </Text>
     );
   }
+
   return (
-    <>
+    <div className="radarChart">
       {transformedRadarData.length > 0 && (
-        <ResponsiveContainer width="100%" height={400}>
+        <ResponsiveContainer>
           <RadarChart
-            outerRadius={90}
             data={transformedRadarData.reverse()}
-            style={{ backgroundColor: "#000", borderRadius: 5 }}
+            style={{ backgroundColor: "#000", borderRadius: 5, color: "#fff" }}
+            cx="50%"
+            cy="50%"
+            outerRadius={58}
           >
             <PolarGrid
               gridType="polygon"
               radialLines={false}
               polarRadius={[0, 10, 27, 49, 72, 95]}
               stroke="#FFF"
+              fill="#fff"
             />
             <PolarAngleAxis
               dataKey="subject"
@@ -61,7 +66,7 @@ const RadarCharts = (props) => {
           </RadarChart>
         </ResponsiveContainer>
       )}
-    </>
+    </div>
   );
 };
 

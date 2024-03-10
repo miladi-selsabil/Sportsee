@@ -1,9 +1,10 @@
 import Header from "../Components/Header";
-// import Footer from "../components/Footer";
 import { Outlet } from "react-router";
+import { NavLink } from "react-router-dom";
+
 function Layout() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Outlet />
       {/* <Footer /> */}

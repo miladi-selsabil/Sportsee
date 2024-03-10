@@ -79,7 +79,7 @@ function Accueil() {
       getId();
     }
     
-  }, [id, mock]);
+  }, [id]);
  useEffect(() => {
    if (mock) {
     const activities = data.find(activitie => activitie.userId === Number.parseInt(id))
@@ -116,7 +116,7 @@ function Accueil() {
   }, [userInfo]);
 
   return (
-    <div className="container">
+    <div className="containerChildren">
       <Icon />
 
       <div className="charts">

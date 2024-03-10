@@ -21,8 +21,8 @@ const LineCharts = (props) => {
         <h3 className="lineTitle">
           Durée moyenne des <br /> sessions
         </h3>
-      </div>
-      <ResponsiveContainer width="100%" height={400}>
+      
+      <ResponsiveContainer  >
         <LineChart
           data={transformedLineData}
           style={{ backgroundColor: "red", borderRadius: 5 }}
@@ -53,7 +53,7 @@ const LineCharts = (props) => {
             stroke="#FFF"
           />
         </LineChart>
-      </ResponsiveContainer>
+      </ResponsiveContainer></div>
     </>
   );
 };
