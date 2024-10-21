@@ -11,7 +11,7 @@ import { useParams } from "react-router-dom";
 import PieChartData from "../Components/PieChart";
 
 function Accueil() {
-    const [mock, setmock] = useState(true);
+    const [mock, setmock] = useState(false);
 
   const [activity, setActivity] = useState([]);
   const [averageSession, setAverageSession] = useState([]);
